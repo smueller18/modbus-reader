@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-VERSION=$(python -c "import modbusreader; print(modbusreader.__version__)")
+VERSION=$(python3 -c "import modbusreader; print(modbusreader.__version__)")
 
 echo "creating tag $VERSION"
 git tag $VERSION
@@ -14,5 +14,5 @@ if [ -f MANIFEST ]; then
 fi
 
 echo "uploading package."
-python setup.py sdist
+python3 setup.py sdist
 twine upload dist/*
