@@ -1,4 +1,4 @@
-[![Documentation Status](https://readthedocs.org/projects/modbus-reader/badge/?version=latest)](https://modbus-reader.readthedocs.io/en/latest/?badge=latest)
+[![Documentation Status](https://readthedocs.org/projects/modbusreader/badge/?version=latest)](https://modbusreader.readthedocs.io/en/latest/?badge=latest)
 
 
 # modbus-reader

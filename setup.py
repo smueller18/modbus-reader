@@ -19,8 +19,8 @@ setup(
     description='Read values of a modbus server automatically based on a defined config',
     author='Stephan Müller',
     author_email='mail@stephanmueller.eu',
-    url='https://github.com/smueller18/modbus-reader',
-    download_url='https://github.com/smueller18/modbus-reader',
+    url='https://github.com/smueller18/modbusreader',
+    download_url='https://github.com/smueller18/modbusreader',
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Programming Language :: Python :: 3.5",
