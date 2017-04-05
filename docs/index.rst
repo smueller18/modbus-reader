@@ -1,6 +1,6 @@
 
-Welcome to kafka-connector's documentation!
-===========================================
+Welcome to modbusreader's documentation!
+========================================
 
 Contents:
 
