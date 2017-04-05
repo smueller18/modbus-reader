@@ -2,10 +2,6 @@
 
 VERSION=$(python3 -c "import modbusreader; print(modbusreader.__version__)")
 
-if [ -f MANIFEST ]; then
-    echo "removing manifest file"
-    rm MANIFEST
-fi
 
 echo "uploading package."
 python3 setup.py sdist

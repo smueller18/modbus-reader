@@ -32,5 +32,6 @@ setup(
     ],
     data_files=[
         ('config', ['config/modbus_definition.schema.json'])
-    ]
+    ],
+    include_package_data=True
 )
