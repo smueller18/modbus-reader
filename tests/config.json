@@ -1,0 +1,32 @@
+{
+  "discrete_inputs": {
+    "test": {
+      "address": 0,
+      "description": "test"
+    }
+  },
+  "discrete_outputs": {
+    "test": {
+      "address": 1,
+      "description": "test"
+    }
+  },
+  "input_registers": {
+    "test": {
+      "address": 0,
+      "description": "test",
+      "type": "int16",
+      "unit": "°C",
+      "factor": 0.1
+    }
+  },
+  "output_registers": {
+    "test": {
+      "address": 0,
+      "description": "test",
+      "type": "float",
+      "unit": "°C",
+      "factor": 0.1
+    }
+  }
+}

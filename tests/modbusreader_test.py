@@ -1,5 +1,3 @@
-import os
 from modbusreader import ModbusReader
 
-
-modbus = ModbusReader("localhost", 502, 1, "test")
+modbus = ModbusReader("localhost", 502, 1, "config.json")

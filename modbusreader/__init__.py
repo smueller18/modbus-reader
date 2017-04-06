@@ -12,7 +12,7 @@ __author__ = "Stephan Müller"
 __copyright__ = "2017, Stephan Müller"
 __license__ = "MIT"
 
-__version__ = '1.0.2'
+__version__ = '1.0.3'
 
 __dirname__ = os.path.dirname(os.path.abspath(__file__))
 
@@ -58,9 +58,11 @@ class ModbusReader:
         self.float_low_byte_first = float_low_byte_first
 
         if type(modbus_device_definition) is not dict:
-            modbus_device_definition = json.load(open(modbus_device_definition, 'r'))
+            modbus_device_definition = json.loads(open(modbus_device_definition, 'rb').read().decode("UTF-8"))
 
-        validate(modbus_device_definition, json.load(open(self._modbus_device_definition_schema_file, 'r')))
+        validate(modbus_device_definition,
+                 json.loads(open(self._modbus_device_definition_schema_file, 'rb').read().decode("UTF-8")))
+
         self.grouped_modbus_device_definition = self.group_modbus_device_definition(modbus_device_definition)
         self.client = ModbusTcpClient(host=self.host, port=self.port)
 
