@@ -30,8 +30,8 @@ setup(
         "jsonschema",
         "pymodbus3"
     ],
-    #data_files=[
-    #    ('config', ['modbusreader/config/modbus_definition.schema.json'])
-    #],
+    data_files=[
+        ('config', ['modbusreader/config/modbus_definition.schema.json'])
+    ],
     include_package_data=True
 )
