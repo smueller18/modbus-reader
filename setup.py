@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 import re
-from distutils.core import setup
+from setuptools import setup
 
 __author__ = u'Stephan Müller'
 __copyright__ = u'2017, Stephan Müller'

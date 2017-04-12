@@ -51,7 +51,7 @@ class ModbusReader:
         :raise ~jsonschema.exceptions.ValidationError: if the modbus device definition dictionary or file is invalid
         :raise ~jsonschema.exceptions.SchemaError: if the modbus device definition config itself is invalid
         """
-        self._modbus_device_definition_schema_file = __dirname__ + "/config/modbus_definition.schema.json"
+        self._modbus_device_definition_schema_file = __dirname__ + "/modbus_definition.schema.json"
         self.host = host
         self.port = port
         self.unit = unit
