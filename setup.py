@@ -1,20 +1,23 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
+#!/usr/bin/env python3
 
-from setuptools import setup
-import modbusreader
+import re
+from distutils.core import setup
 
 __author__ = u'Stephan Müller'
 __copyright__ = u'2017, Stephan Müller'
 __license__ = u'MIT'
 
 
+def get_version():
+    with open('modbusreader/__init__.py') as version_file:
+        return re.search(r"""__version__\s+=\s+(['"])(?P<version>.+?)\1""", version_file.read()).group('version')
+
 install_requires = []
 
 setup(
     name='modbusreader',
     packages=['modbusreader'],
-    version=modbusreader.__version__,
+    version=get_version(),
     license='MIT',
     description='Read values of a modbus server automatically based on a defined config',
     author='Stephan Müller',
@@ -30,8 +33,10 @@ setup(
         "jsonschema",
         "pymodbus3"
     ],
-    data_files=[
-        ('config', ['modbusreader/config/modbus_definition.schema.json'])
-    ],
+    package_data={
+        "modbusreader": [
+            "modbus_definition.schema.json",
+        ],
+    },
     include_package_data=True
 )

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-VERSION=$(python3 -c "import modbusreader; print(modbusreader.__version__)")
+VERSION=$(python3 -c "from modbusreader import __version__; print(__version__)")
 
 
 echo "uploading package."

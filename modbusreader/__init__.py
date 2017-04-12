@@ -8,11 +8,11 @@ from math import acos, asin, atan, atan2, ceil, cos, cosh, degrees, e, exp, fabs
     log, log10, modf, pi, pow, radians, sin, sinh, sqrt, tan, tanh
 
 
+__version__ = '1.0.4'
+
 __author__ = "Stephan Müller"
 __copyright__ = "2017, Stephan Müller"
 __license__ = "MIT"
-
-__version__ = '1.0.3'
 
 __dirname__ = os.path.dirname(os.path.abspath(__file__))
 
