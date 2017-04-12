@@ -9,7 +9,7 @@ __license__ = u'MIT'
 
 
 def get_version():
-    with open('modbusreader/__init__.py') as version_file:
+    with open('modbusreader/__init__.py', encoding='utf-8') as version_file:
         return re.search(r"""__version__\s+=\s+(['"])(?P<version>.+?)\1""", version_file.read()).group('version')
 
 install_requires = []
