@@ -1,15 +1,9 @@
-image: python:alpine
-
 pages:
+  image: $CI_REGISTRY/docker/python-sphinx
   script:
-  - pip install sphinx
-  - pip install -r requirements.txt
-  - apk --no-cache add make
-  - cd docs
-  - make html
-  - mv _build/html/ ../public/
+    - /build.sh
   artifacts:
     paths:
-    - public
+      - public
   only:
-  - master
+    - master
