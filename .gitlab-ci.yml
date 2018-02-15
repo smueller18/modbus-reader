@@ -1,3 +1,10 @@
+test:
+  image: python3
+  script:
+    - pip install -r requirements.txt
+    - pip install unittest2
+    - python3 -m unittest discover
+
 pages:
   image: $CI_REGISTRY/docker/python-sphinx
   script:
