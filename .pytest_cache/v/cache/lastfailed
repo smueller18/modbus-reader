@@ -1,0 +1,4 @@
+{
+  "tests/modbusreader_test.py": true,
+  "tests/test_modbusreader.py": true
+}
