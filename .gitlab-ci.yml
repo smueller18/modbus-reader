@@ -1,3 +1,8 @@
+test:
+  image: $CI_REGISTRY/docker/python-pytest
+  script:
+    - /build.sh
+
 pages:
   image: $CI_REGISTRY/docker/python-sphinx
   script:
