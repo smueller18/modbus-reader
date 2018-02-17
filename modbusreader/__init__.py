@@ -33,7 +33,7 @@ class ModbusReader:
     def __init__(self, host, port, unit, modbus_device_definition, float_low_byte_first=False):
         """
         Initializes a new instance
-        
+
         :param host: host of modbus server
         :type host: str
         :param port: port of modbus server
@@ -47,7 +47,7 @@ class ModbusReader:
                 possibilities for the determination of the float value. Set to True if float interpretation order is
                 Low Byte and then High Byte. Otherwise interpretation order is High Byte and then Low Byte.
         :type float_low_byte_first: bool
-        
+
         :raise ~jsonschema.exceptions.ValidationError: if the modbus device definition dictionary or file is invalid
         :raise ~jsonschema.exceptions.SchemaError: if the modbus device definition config itself is invalid
         """
@@ -70,10 +70,10 @@ class ModbusReader:
     def group_modbus_device_definition(modbus_device_definition):
         """
         Groups modbus addresses. This method is needed, if there are gaps of non existent modbus addresses.
-        
+
         :param modbus_device_definition: modbus device definition dictionary
         :type modbus_device_definition: dict
-        
+
         :return: grouped modbus device definition dictionary
         :type: dict
         """
@@ -163,13 +163,13 @@ class ModbusReader:
     def read_discretes(self, discrete_type):
         """
         read either discrete inputs or outputs
-        
+
         :param discrete_type: type of discrete. either 'input' or 'output'
         :type discrete_type: str
-        
+
         :return: discrete values: { sensor_id: sensor_value,  ... }
         :type: dict
-        
+
         :raise AttributeError: is raised if discrete_type doesn't match required types
         :raise IOError: is raised if reading discretes over TCP connection fails
         """
@@ -204,12 +204,12 @@ class ModbusReader:
     def read_registers(self, register_type):
         """
         read either input or output registers
-        
+
         :param register_type: type of register. either 'input' or 'output'
         :type register_type: str
         :return: discrete output values as follows: { sensor_id: sensor_value, ... }
         :type: dict
-        
+
         :raise AttributeError: If register_type doesn't match required types
         :raise IOError: If reading registers over TCP connection fails
         """
@@ -271,10 +271,10 @@ class ModbusReader:
     def read_discrete_outputs(self):
         """
         read discrete outputs
-        
+
         :return: discrete output values as follows: { sensor_id: sensor_value, ... }
         :type: dict
-        
+
         :raise IOError: is raised if reading discretes over TCP connection fails
         """
         return self.read_discretes("output")
@@ -282,10 +282,10 @@ class ModbusReader:
     def read_discrete_inputs(self):
         """
         read discrete inputs
-        
+
         :return: discrete output values as follows: { sensor_id: sensor_value, ... }
         :type: dict
-        
+
         :raise IOError: is raised if reading discretes over TCP connection fails
         """
         return self.read_discretes("input")
@@ -293,10 +293,10 @@ class ModbusReader:
     def read_output_registers(self):
         """
         read output registers
-        
+
         :return: discrete output values as follows: { sensor_id: sensor_value, ... }
         :type: dict
-        
+
         :raise IOError: is raised if reading registers over TCP connection fails
         """
         return self.read_registers("output")
@@ -304,10 +304,10 @@ class ModbusReader:
     def read_input_registers(self):
         """
         read input registers
-        
+
         :return: discrete output values as follows: { sensor_id: sensor_value, ... }
         :type: dict
-        
+
         :raise IOError: is raised if reading registers over TCP connection fails
         """
         return self.read_registers("input")
@@ -315,10 +315,10 @@ class ModbusReader:
     def read_all_values(self):
         """
         read discretes and registers
-        
+
         :return: discrete output values as follows: { sensor_id: sensor_value, ... }
         :type: dict
-        
+
         :raise IOError: is raised if reading discretes or registers over TCP connection fails
         """
         sensor_readings = dict()
