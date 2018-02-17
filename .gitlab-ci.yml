@@ -3,8 +3,8 @@ test:
   script:
     - apk --no-cache add g++
     - pip install -r requirements.txt
-    - pip install unittest2
-    - python3 -m unittest discover
+    - pip install unittest2 pytest pytest-cov
+    - py.test --cov=modbusreader
 
 pages:
   image: $CI_REGISTRY/docker/python-sphinx
