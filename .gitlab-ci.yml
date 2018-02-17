@@ -1,7 +1,6 @@
 test:
   image: $CI_REGISTRY/docker/python-pytest
   script:
-    - printenv
     - /build.sh
 
 pages:
